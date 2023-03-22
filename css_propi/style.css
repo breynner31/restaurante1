@@ -1,81 +1,98 @@
-  
-  main{
-    width: 100%;
-    padding: 20px;
-    margin: auto;
-    margin-top: 100px;
-  }
+body{
+  background-image: url(../php/css_admin/img/fondo.jpg);
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  
-  .contenedor__login-register2{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 380px;
-    position: relative;
-    top: 87px;
-    left: 593px;
-  }
-  
-.contenedor__login-register2 form{
-    width: 100%;
-    padding: 80px 20px;
-    background: white;
-    border-radius: 20px;
-  }
-  
-  .contenedor__login-register2 form h2{
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #000000;
-  }
-  
-  .contenedor__login-register2 form input{
-    width: 100%;
-    margin-top: 20px;
-    padding: 10px;
-    border: none;
-    background: #F2F2F2;
-    font-size: 16px;
-    outline: none;
-  }
-  
-  .contenedor__login-register2 form button {
-    padding: 10px 40px;
-    margin-top: 40px;
-    border: none;
-    font-size: 14px;
-    background: #000000;
-    font-weight: 600;
-    cursor: pointer;
-    color: white;
-    outline: none;
-  }
-  
-  .button1{
-    padding: 10px 40px;
-    margin-top: -549px;
-    border: none;
-    font-size: 14px;
-    background: #000000;
-    font-weight: 600;
-    cursor: pointer;
-    color: white;
-    left: 100px;
-    margin-top: -617px;
-    outline: none;
-  }
-
-.formulario__register_propi{
-    display: none;
-
-  }
+main{
+  width: 100%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 100px;
+}
 
 
-  .boton1:hover{
- 
-    background:black;
-    color:white;
+.contenedorlogin-register2{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+  position: absolute;
+  top: 87px;
+  left: 593px;
+}
 
-  }
+.contenedorlogin-register2 form{
+  width: 100%;
+  padding: 28px 80px;
+  background: white;
+  border-radius: 20px;
+}
+
+.contenedorlogin-register2 form h2{
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.contenedorlogin-register2 form input{
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background: #F2F2F2;
+  font-size: 16px;
+  outline: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedorlogin-register2 form button {
+  padding: 10px 60px;
+  margin-top: 18px;
+  border: none;
+  font-size: 14px;
+  text-decoration-color:#000000;
+  text-decoration:none;
+  background: #847685;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  border-radius: 13px;
+}
+
+
+
+.formularioregister_propi{
+  display: none;
+
+}
+
+.button1{
+  padding: 10px 60px;
+  margin-top: 18px;
+  border: none;
+  font-size: 14px;
+  background: #231c23;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  border-radius: 13px;
+}
+.boton1:hover{
+
+  background:black;
+  color:white;
+
+}
+

@@ -31,7 +31,7 @@ session_start();
                                         <?php
                                          
                                         $conexion=mysqli_connect("localhost","root","","login_register");  
-                                        $sql="SELECT *  FROM usuarios1 where rol_id";
+                                        $sql="SELECT *  FROM propietarios_usuarios  where rol_id";
                                         
                                         $query=mysqli_query($conexion,$sql);
                                         $row=mysqli_fetch_array($query);
@@ -41,7 +41,7 @@ session_start();
                                                 <th><?php  echo $row['id']?></th>
                                                 <th><?php  echo $row['usuario']?></th>
                                                 <th><?php  echo $row['correo']?></th> 
-                                                <th><?php  echo $row['rol_id']?></th>   
+                                                <th><?php  echo $row['rol_id']?></th>    
                                                 <th><a href="editar.php?id=<?php echo $row['id'] ?>" class="btn btn-info">Editar</a></th>
                                                 <th><a href="delete.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">Eliminar</a></th>                                         
                                             </tr>

@@ -12,7 +12,7 @@ session_start();
         
     </head>
     <body>
-
+                        <h1>Bienvenido ala lista de Propietarios</h1>
                         <div class="col-md-8">
                             <table class="table" >
                                 <thead class="table-success table-striped" >
@@ -21,6 +21,7 @@ session_start();
                                         <th>usuario</th>
                                         <th>correo</th>
                                         <th>roles</th>
+                                        
                                         <th></th>
                                         <th></th>
                                     </tr>
@@ -41,9 +42,10 @@ session_start();
                                                 <th><?php  echo $row['id']?></th>
                                                 <th><?php  echo $row['usuario']?></th>
                                                 <th><?php  echo $row['correo']?></th> 
-                                                <th><?php  echo $row['rol_id']?></th>   
+                                                <th><?php  echo $row['rol_id']?></th>     
                                                 <th><a href="editar.php?id=<?php echo $row['id'] ?>" class="btn btn-info">Editar</a></th>
-                                                <th><a href="delete.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">Eliminar</a></th>                                         
+                                                <th><a href="delete.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">Eliminar</a></th> 
+
                                             </tr>
                                         <?php 
                                             }

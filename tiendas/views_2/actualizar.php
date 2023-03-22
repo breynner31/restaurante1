@@ -7,7 +7,7 @@
     $correo=$_POST['correo'];
     $rol_id=$_POST['rol_id'];
 
-    $sql="UPDATE usuarios1 SET usuario='$usuario',correo='$correo',rol_id='$rol_id' where id='$id'";
+    $sql="UPDATE propietarios_usuarios  SET usuario='$usuario',correo='$correo',rol_id='$rol_id' where id='$id'";
     $query=mysqli_query($conexion,$sql);
 
         if($query){
