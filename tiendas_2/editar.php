@@ -1,12 +1,12 @@
 <?php
 
 
-$conexion2=mysqli_connect("localhost","root","","login_register");
+$conexion=mysqli_connect("localhost","root","","login_register");
 
 $id=$_GET['id'];
 
 $sql="SELECT * FROM productos WHERE id='$id'";
-$query=mysqli_query($conexion2,$sql);
+$query=mysqli_query($conexion,$sql);
 
 $row=mysqli_fetch_array($query);
 ?>

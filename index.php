@@ -1,12 +1,10 @@
-<!---21/03/23-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante Fesc</title>
-    
-
     <link rel="icon" type ="image/png" href="recursos/foto_tta.png">
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -45,7 +43,7 @@
                     </form>
                     
                     <!--register-->
-                    <form action="registro_usuario_be.php" method="POST" class="formulario__register">
+                    <form action="php/registro_usuario_be.php" method="POST" class="formulario__register">
 
                     
                         <h2>Regístrarse</h2>

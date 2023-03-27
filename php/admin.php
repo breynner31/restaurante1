@@ -1,5 +1,18 @@
+<?php
+session_start();
 
+if(!isset($_SESSION['usuario'])){
+    echo '
+    <script>
 
+        alert("inicie session , por favor veifique los datos introducidos ");
+        window.location ="../";
+
+    </script>
+
+';
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,8 +24,7 @@
     <script src="https://kit.fontawesome.com/0dd34c83b9.js" crossorigin="anonymous"></script>
     <link  rel="stylesheet" href="css_admin/style.css">
     
-    <title> Bienvenida admin </title>
-    
+    <title> Bienvenida admin </title> 
 </head>
 <body>
     <nav class="sidebar close">

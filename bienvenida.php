@@ -1,4 +1,18 @@
+<?php
+session_start();
 
+if(!isset($_SESSION['usuario'])){
+    echo '
+    <script>
+
+        alert("inicie session , por favor veifique los datos introducidos ");
+        window.location ="index.php";
+
+    </script>
+
+';
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

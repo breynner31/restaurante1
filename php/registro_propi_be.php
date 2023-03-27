@@ -11,10 +11,9 @@
     $contrasena = $_POST['contrasena'];
     //encriptar contraseña
     $contrasena =hash('sha512',$contrasena);
-    $activo=$_POST['activo'];
     // para al momento de insertar los valores y las variables que le dimos
-    $query = "INSERT INTO propietarios_usuarios(usuario,correo,contrasena,rol_id,) 
-              VALUES('$usuario','$correo','$contrasena','1',)";
+    $query = "INSERT INTO propietarios_usuarios(usuario,correo,contrasena,rol_id) 
+              VALUES('$usuario','$correo','$contrasena','1')";
     
     
         //verificar q el usuario no se repita en la base de datos

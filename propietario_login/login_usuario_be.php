@@ -14,11 +14,10 @@
     
   
     if (mysqli_num_rows($resultado)>0){
-    if($filas['rol_id']==1){
-        if($filas['activo'] ==2 ){
-        $_SESSION['usuario'] =$correo;
-        header("location: ../tiendas_3/php/propi.php");
-        exit;
+        if($filas['rol_id']==1){
+            $_SESSION['usuario'] =$correo;
+            header("location: ../tiendas_3/php/propi.php");
+            exit;
     }}
     if($filas['rol_id']==2)  {
         header("location: ../tiendas_3/php/propi.php");
@@ -33,7 +32,7 @@
     
     }
 
-    }
+    
 else{        echo '
     <script>
 
