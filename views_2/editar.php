@@ -1,14 +1,19 @@
+
 <?php
+
+
 
 
 $conexion=mysqli_connect("localhost","root","","login_register");
 
 $id=$_GET['id'];
 
-$sql="SELECT * FROM propietarios_usuarios WHERE id='$id'";
+$sql="SELECT * FROM usuarios1 WHERE id='$id'";
 $query=mysqli_query($conexion,$sql);
 
 $row=mysqli_fetch_array($query);
+
+
 ?>
 
 <!DOCTYPE html>

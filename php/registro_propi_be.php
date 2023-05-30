@@ -9,15 +9,16 @@
     $correo = $_POST['correo'];
     $usuario = $_POST['usuario'];
     $contrasena = $_POST['contrasena'];
+    $tienda = $_POST['tiendas'];
     //encriptar contraseña
     $contrasena =hash('sha512',$contrasena);
     // para al momento de insertar los valores y las variables que le dimos
-    $query = "INSERT INTO propietarios_usuarios(usuario,correo,contrasena,rol_id) 
-              VALUES('$usuario','$correo','$contrasena','1')";
+    $query = "INSERT INTO usuarios1(usuario,correo,contrasena,rol_id,tienda_id) 
+              VALUES('$usuario','$correo','$contrasena','2','$tienda')";
     
     
         //verificar q el usuario no se repita en la base de datos
-        $verificar_usuario =mysqli_query ($conexion,"SELECT * FROM propietarios_usuarios WHERE usuario='$usuario'");
+        $verificar_usuario =mysqli_query ($conexion,"SELECT * FROM usuarios1 WHERE usuario='$usuario'");
         //MIRA LA FILA Y LA EVALUA DE usuario
         if(mysqli_num_rows($verificar_usuario)>0){
             echo '
@@ -31,7 +32,7 @@
         
     
        //verificar q el correo no se repita en la base de datos
-    $verificar_correo =mysqli_query ($conexion,"SELECT * FROM propietarios_usuarios WHERE correo='$correo'");
+    $verificar_correo =mysqli_query ($conexion,"SELECT * FROM usuarios1 WHERE correo='$correo'");
     //MIRA LA FILA Y LA EVALUA DE CORREO
     if(mysqli_num_rows($verificar_correo)>0){
         echo '
@@ -44,8 +45,6 @@
     }
 
 
-
-    
    
     
 

@@ -1,12 +1,10 @@
 <?php
 session_start();
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title> Lista de restaurantes </title>
+        <title> Lista de usuarios </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="#" rel="stylesheet">
@@ -14,23 +12,27 @@ session_start();
         
     </head>
     <body>
-                        <h1>Lista de restaurante</h1>
-                        <div class="col-md-8">
-                            <table class="table" >
-                                <thead class="table-success table-striped" >
+    <div class="container p-2 my-2 bg-warning text-white"><h3>Lista de propietarios</h3></div>
+
+<div class="col-md-8">
+    <table class="table table-dark table-hover" border="3">
+        <thead class="table bg-warning table-striped" >
+                <button style="margin: 25px;" class="btn btn-info btn-sm" type="button"><a href="../php/propi.php" >Panel de control</a> </button>
+                        <button style="margin: 25px;" class="btn btn-info btn-sm" type="button" ><a href="../php/registro_propi.php" >Registrar </a> </button>
+                       
                                     <tr>
                                         <th>id</th>
-                                        <th>nombre</th>
-                                        <th>lugar</th>
-                                        <th>logo</th>
-                                       
+                                        <th>usuario</th>
+                                        <th>correo</th>
+                                        <th>roles</th>
+                                        <th></th>
+                                        <th></th>
                                     </tr>
                                 </thead>
-                                <button  class="button1" ><a href="../php/propi.php" >Panel de control</a> </button>
                                 <tbody>
                                     <?php
                                         $conexion=mysqli_connect("localhost","root","","login_register");  
-                                        $sql="SELECT *  FROM productos ";
+                                        $sql="SELECT *  FROM tiendas ";
                                         $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>

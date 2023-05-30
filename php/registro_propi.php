@@ -1,5 +1,8 @@
+<?php
 
-
+$tiendaInfo ="select * from tiendas";
+$viewDatauser ="select * from usuarios1";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +20,27 @@
 <input type="text" minlength="4" maxlength="8" size="10"  placeholder="Usuario (4 o 8 caracteres): " name="usuario">
 <input type="email" required="@gmail.com" placeholder="Correo Electronico" name="correo">
 <input type="password" required placeholder="Contraseña" name="contrasena">
-<button>Regístrarse </button>
+
+
+
+  
+ 
+
+    <select class="js-example-basic-single" style= "width: 100% " name="tiendas" id="tiendas">
+                      <?php
+                          $conexion = mysqli_connect("localhost","root","","login_register");
+                      $viewDatauser = mysqli_query($conexion, $tiendaInfo);
+                      while ($row = mysqli_fetch_assoc($viewDatauser)) {
+                        
+                        echo '<option  value="' . $row["id"] . '">Nombre: ' . $row["nombre"] . ' / ID: ' . $row["id"] . '</option>';
+                      }
+                      ?>
+                     
+                    </select><br>
+                    
+             
+                 
+    <button>Regístrarse </button>
 <button><a class="button1" href="admin.php" >Panel de control</a></button>
 </form>
 </div>

@@ -17,7 +17,7 @@
 <h2>Regístrar platos</h2>
 <input type="text" required placeholder="Nombre" name="nombre">
 <input type="text" required placeholder="categoria" name="categoria">
-<input type="number" required placeholder="precio " name="precio">
+<input type="text" required placeholder="precio " name="precio">
 <input type="file" required placeholder="" name="foto">
 <button>Regístrarse </button>
 

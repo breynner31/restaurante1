@@ -7,30 +7,19 @@
     $contrasena =$_POST ['contrasena'];
     $contrasena = hash('sha512', $contrasena);
     // validamos 
-    $validar_login ="SELECT * FROM propietarios_usuarios WHERE usuario='$usuario' and correo ='$correo'and contrasena='$contrasena'";
+    $validar_login ="SELECT * FROM usuarios1 WHERE usuario='$usuario' and correo ='$correo'and contrasena='$contrasena'";
     $resultado = mysqli_query ($conexion,$validar_login);
     $filas = mysqli_fetch_array($resultado);
 
     
   
     if (mysqli_num_rows($resultado)>0){
-        if($filas['rol_id']==1){
+        if($filas['rol_id']==2){
             $_SESSION['usuario'] =$correo;
-            header("location: ../tiendas_3/php/propi.php");
+            header("location: ../tiendas/php/propi.php");
             exit;
     }}
-    if($filas['rol_id']==2)  {
-        header("location: ../tiendas_3/php/propi.php");
-        exit;
-    
-    
-    }
-    if($filas['rol_id']==3)  {
-        header("location: ../tiendas_3/php/propi.php");
-        exit;
-    
-    
-    }
+  
 
     
 else{        echo '

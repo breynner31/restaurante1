@@ -19,7 +19,7 @@
 <input type="text" minlength="4" maxlength="8" size="10"  placeholder="Usuario (4 o 8 caracteres): " name="usuario">
 <input type="email" required="@gmail.com" placeholder="Correo Electronico" name="correo">
 <input type="password" required placeholder="Contraseña" name="contrasena">
-<button><a  class="badge bg-secondary text-dark " href="../tiendas/php/propi.php" >Panel de propietarios</a> </button>
+<button><a  class="badge bg-secondary text-dark "  >Panel de propietarios</a> </button>
 <button><a class="badge bg-secondary text-dark" href="../index.php" >Panel de control</a> </button>
 </form>
 

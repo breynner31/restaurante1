@@ -22,6 +22,7 @@
         exit;
     }
     if ($filas['rol_id']==0)  {
+        $_SESSION['usuario'] =$correo;
         header("location: ../bienvenida.php");
         exit;
     

@@ -7,7 +7,7 @@
     $lugar=$_POST['lugar'];
     $foto=$_POST['foto'];
 
-    $sql="UPDATE productos SET nombre='$nombre',lugar='$lugar', foto='$foto' where id='$id'";
+    $sql="UPDATE tiendas SET nombre='$nombre',lugar='$lugar', foto='$foto' where id='$id'";
     $query=mysqli_query($conexion,$sql);
 
         if($query){

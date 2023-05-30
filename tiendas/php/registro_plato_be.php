@@ -44,7 +44,7 @@
 if($ejecutar){
     echo'
     |
-        <script>alert("productos  almacenado exitosamente");
+        <script>alert("tiendas  almacenado exitosamente");
         window.location ="registro_plato.php";
         </script>
     

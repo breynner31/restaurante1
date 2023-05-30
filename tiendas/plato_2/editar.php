@@ -29,7 +29,7 @@ $row=mysqli_fetch_array($query);
                                 <input type="hidden" name="id" value="<?php echo $row['id']  ?>">
                                 <input type="text" class="form-control mb-3" name="nombre" placeholder="nombre" value="<?php echo $row['nombre']  ?>">
                                 <input type="text" class="form-control mb-3" name="categoria" placeholder="categoria" value="<?php echo $row['categoria']  ?>">
-                                <input type="number" class="form-control mb-3" name="precio" placeholder="lugar" value="<?php echo $row['precio']  ?>">
+                                <input type="text" class="form-control mb-3" name="precio" placeholder="lugar" value="<?php echo $row['precio']  ?>">
                                 <input type="file" class="form-control mb-3" name="foto" placeholder="" value="<?php echo $row['foto']  ?>">
                             <input type="submit" class="btn btn-primary btn-block" value="Actualizar">
                     </form>
