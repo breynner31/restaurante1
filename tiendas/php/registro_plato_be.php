@@ -10,7 +10,8 @@
     $precio = $_POST['precio'];
     $foto = $_POST['foto'];
     $categoria =$_POST['categoria'];
-    $query = "INSERT INTO plato (nombre,precio,foto,categoria,tienda_id)VALUES('$nombre','$precio','$foto','$categoria','1')";
+    $tienda = $_POST['tiendas'];
+    $query = "INSERT INTO plato (nombre,precio,foto,categoria,tienda_id) VALUES('$nombre','$precio','$foto','$categoria','$tienda')";
 
     //verificar q el usuario no se repita en la base de datos
     $verificar_nombre =mysqli_query ($conexion,"SELECT * FROM plato WHERE nombre='$nombre'");

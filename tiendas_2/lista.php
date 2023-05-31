@@ -10,15 +10,27 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="#" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        body{
+            background: linear-gradient(to bottom, #ffffff, #675f5f);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: white;
+        }
+    </style>
 </head>
-<body background="img/0bg.jpg">
+<body background="hola.jpg">
     <center>
         <div class="container p-2 my-2 bg-warning text-white"><h3>Lista de restaurantes</h3></div>
         <div class="col-md-8">
             <table class="table table-dark table-hover" border="3">
                 <thead class="table bg-warning table-striped" >
-                    <button style="margin: 25px;" class="btn btn-info btn-sm" type="button"><a href="../php/admin.php">Panel de control</a></button>
-                    <button style="margin: 25px;" class="btn btn-info btn-sm" type="button"><a href="../php/registro_tienda.php">Registrar</a></button>
+                    <button style="margin: 25px;" class="btn btn-dark btn-sm" type="button"><a href="../php/admin.php" style="text-decoration: none;">Panel de control</a></button>
+                    <button style="margin: 25px;" class="btn btn-dark btn-sm" type="button"><a href="../php/registro_tienda.php" style="text-decoration: none;">Registrar</a></button>
                     <tr>
                         <th>id</th>
                         <th>nombre</th>
@@ -54,4 +66,4 @@ session_start();
         </div>
     </center>
 </body>
-</html> 
+</html>

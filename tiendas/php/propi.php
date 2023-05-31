@@ -69,12 +69,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-link">
-                        <a href="../views_emple/lista.php">
-                            <i class="fa-solid fa-user-tag"></i>
-                            <span class="text nav-text">Jefes registrados</span>
-                        </a>
-                    </li>
+                 
 
                 </ul>
             </div>
