@@ -1,5 +1,31 @@
+
 <?php
-session_start();
+// Verificar si se ha enviado el formulario para habilitar/inhabilitar un producto
+if(isset($_POST['producto_id']) && isset($_POST['estado'])){
+    $producto_id = $_POST['producto_id'];
+    $estado = $_POST['estado'];
+    $tienda_id =$_POST['tienda_id'];
+
+    // Realizar las operaciones necesarias en la base de datos para habilitar/inhabilitar el producto
+    $conexion = mysqli_connect("localhost", "root", "", "login_register");
+
+    // Preparar la consulta
+    $stmt = mysqli_prepare($conexion, "UPDATE plato SET estado = ?  WHERE id = ?");
+
+    // Vincular los parámetros
+    mysqli_stmt_bind_param($stmt, "ii", $estado, $producto_id);
+
+    // Ejecutar la consulta
+    mysqli_stmt_execute($stmt);
+
+    // Cerrar la declaración y la conexión
+    mysqli_stmt_close($stmt);
+    mysqli_close($conexion);
+
+    // Redirigir al mismo archivo para evitar el reenvío del formulario
+    header("Location: ".$_SERVER['PHP_SELF']);
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +43,7 @@ session_start();
         }
 
         h1 {
-            color: blac;
+            color: black;
             text-align: center;
         }
 
@@ -92,11 +118,7 @@ session_start();
     </style>
 </head>
 
-<body style="  background: linear-gradient(to bottom, #ffffff, #675f5f);
-background-repeat: no-repeat;
-background-attachment: fixed;
-margin: 0;
-padding: 0;" >
+<body style="background: linear-gradient(to bottom, #ffffff, #675f5f); background-repeat: no-repeat; background-attachment: fixed; margin: 0; padding: 0;">
     <div class="container">
         <h1>Lista de platos</h1>
         <div class="col-md-8">
@@ -109,8 +131,7 @@ padding: 0;" >
                         <th>logo</th>
                         <th>Categoria</th>
                         <th>Tienda_id</th>
-                        <th></th>
-                        <th></th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -119,7 +140,7 @@ padding: 0;" >
                     $sql = "SELECT *  FROM plato ";
                     $query = mysqli_query($conexion, $sql);
                     while ($row = mysqli_fetch_array($query)) {
-                    ?>
+                        ?>
                         <tr>
                             <td><?php echo $row['id'] ?></td>
                             <td><?php echo $row['nombre'] ?></td>
@@ -127,8 +148,17 @@ padding: 0;" >
                             <td><img src="../img2/wallpaper.jpg<?php echo $row['foto'] ?>" width="50px"></td>
                             <td><?php echo $row['categoria'] ?></td>
                             <td><?php echo $row['tienda_id'] ?></td>
-                            <td><a href="editar.php?id=<?php echo $row['id'] ?>" class="btn btn-info">Editar</a></td>
-                            <td><a href="delete.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">Eliminar</a></td>
+                            
+                            <td>
+                                <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                                    <input type="hidden" name="producto_id" value="<?php echo $row['id']; ?>">
+                                    <?php if($row['estado'] == 1): ?>
+                                        <button type="submit" name="estado" value="0" class="btn btn-danger">Inhabilitar</button>
+                                    <?php else: ?>
+                                        <button type="submit" name="estado" value="1" class="btn btn-success">Habilitar</button>
+                                    <?php endif; ?>
+                                </form>
+                            </td>
                         </tr>
                     <?php
                     }

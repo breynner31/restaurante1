@@ -134,7 +134,7 @@ if (!isset($_SESSION['usuario'])) {
                         ?>
                         <tr>
                             <td><a href="categorias.php?restaurante=<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></a></td>
-                            <td><img src="ruta_de_tu_directorio/<?php echo $row['foto']; ?>" width="50px"></td>
+                            <td><img src="php/img2/"<?php echo $row['foto']; ?>" width="50px"></td>
                         </tr>
                     <?php
                     }
